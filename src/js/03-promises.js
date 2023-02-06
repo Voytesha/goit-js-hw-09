@@ -7,10 +7,10 @@ const refs = {
   amount: document.querySelector('[name="amount"]'),
 };
 
-refs.form.addEventListener('submit', formSubmit);
+refs.form.addEventListener('submit', runPromises);
 
-function formSubmit(e) {
-  e.preventDefault();
+function runPromises(evt) {
+  evt.preventDefault();
   let delay = Number(refs.delay.value);
   const step = Number(refs.step.value);
   const amount = Number(refs.amount.value);
